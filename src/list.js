@@ -1,17 +1,21 @@
 import React from 'react';
-// import Participants from './list-store';
+import './list.css';
 
 function List (props) {
+    const classes = {
+        red: 'red-dot',
+        green: 'green-dot'
+    }
     return (
         <div className="people">
             <img src={props.avatar} alt="avatar" />
             <span>{props.name}</span>
-            <span>
-                {props.inSession === true ? 'In session' : 'Left session'}
+            <div></div>
+            <span className={classes[props.inSession === true ? 'green' : 'red']}>
             </span>
-            <span>
+            <p>
                 {props.onStage === true ? 'On stage' : ''}
-            </span>
+            </p>
         </div>
     );
 }
