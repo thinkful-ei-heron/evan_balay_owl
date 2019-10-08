@@ -12,7 +12,8 @@
 }
 
 .volume-bar {
-    margin: 0 90px;
+    margin: 0 auto;
+    width: 50%;
     height: 1px;
     background-color: rgb(255, 18, 50);
     text-align: center;

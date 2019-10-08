@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import List from './list';
 import Stage from './stage';
+import Chat from './chat';
 import './App.css';
 
 class App extends Component {
@@ -34,6 +35,19 @@ class App extends Component {
         avatar={list.avatar}
         />
        ))} 
+     </div>
+
+     <div className='chat'>
+       {store.chatEvents.map(chat => (
+         <Chat 
+          key={chat.participantID}
+          type={chat.type}
+          message={chat.message}
+          timestamp={chat.timestamp}
+          time={chat.time}
+         />
+       ))}
+       <input type="text" placeholder="Chat"></input>
      </div>
     </main>
   );
