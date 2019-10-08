@@ -3,3 +3,14 @@
   margin: 40px;
   min-height: calc(100vh - 80px);
 }
+
+.people-list {
+  flex-basis: 1;
+}
+
+.stage  {
+  display: flex;
+  flex-basis: 4;
+  width: 75%;
+  background: rgb(96, 99, 139);
+}

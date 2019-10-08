@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import List from './list';
+import Stage from './stage';
 import './App.css';
 
 class App extends Component {
@@ -23,6 +24,16 @@ class App extends Component {
           onStage={list.onStage}
          />
        ))}
+     </div>
+
+     <div className='stage'>
+       {store.participants.filter(item => (item.onStage === true)).map(list => (
+        <Stage
+        key={list.id}
+        name={list.name}
+        avatar={list.avatar}
+        />
+       ))} 
      </div>
     </main>
   );
