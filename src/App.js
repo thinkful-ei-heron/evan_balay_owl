@@ -38,9 +38,10 @@ class App extends Component {
      </div>
 
      <div className='chat'>
-       {store.chatEvents.map(chat => (
+       {store.chatEvents.map((chat, index) => (
          <Chat 
-          key={chat.participantID}
+          key={index}
+          participantId={chat.participantId}
           type={chat.type}
           message={chat.message}
           timestamp={chat.timestamp}
